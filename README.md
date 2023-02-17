@@ -1,14 +1,9 @@
 # RateMyFood
 This repository contains the code for our software engineering project.
 
+<br>
 ---
 ### Team members:
-#### SE20UCSE040 Dhathri Meda
-#### SE20UCSE086	Mallika Asthana	
-#### SE20UCSE101	Mrinmoy Das	
-#### SE20UCSE117	Nitya Gaddala	
-#### SE20UCSE145 Rohan Potta
-
 #### Dhathri Meda, SE20UCSE040
 #### Sravanthi P, SE20UCSE076
 #### Mrinmoy Kumar Das, SE20UCSE101
