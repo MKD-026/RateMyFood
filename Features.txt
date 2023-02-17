@@ -1,0 +1,6 @@
+Features:
+1. Authentication
+2. Message sending
+3. Realtime database
+4. Rating system
+5. Menu visualisation
