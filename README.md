@@ -1,5 +1,5 @@
 # RateMyFood
-This repository contains the code for our software engineering project.
+This repository contains the code for our software engineering project titled "Ratemyfood"
 
 ---
 ### Team members:
