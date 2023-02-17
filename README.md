@@ -1,7 +1,7 @@
 # RateMyFood
 This repository contains the code for our software engineering project.
 
-<br>
+
 ---
 ### Team members:
 #### Dhathri Meda, SE20UCSE040
@@ -12,6 +12,3 @@ This repository contains the code for our software engineering project.
 #### Rohan Potta, SE20UCSE145
 #### Ashray Gupta, SE20UCAM008
 #### Pranav Bellary, SE20UECE062
-
-<br/>
-<br/>
