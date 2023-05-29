@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e0e0e; /* Dark background color */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: white; /* Text color */
+}
+
+/* --------------------------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #162938; /* Dark header background color */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    font-size: 2em;
+    margin-left: -70px;
+    color: crimson;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #162938;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    content: center;
+}
+
+.navigation .btnlogin-popup:hover {
+    background-color: white;
+    color: #162938;
+    border-radius: 50%;
+}
+
+.settings {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.mode {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+/* --------------------------------------------- */
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* --------------------------------------------- */
+/* Upper part in flex */
+.info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+    background: #1c1c1c; /* Dark info background color */
+}
+
+.info .food-pic {
+    width: 50%;
+}
+
+.image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-140%, -65%);
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid #fff;
+}
+
+.info .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    padding: 50px;
+    margin-top: 150px;
+    margin-right: 70px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background: #3a3a3a; /* Dark menu items background color */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 7px;
+}
+
+.menu-item h3 {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    color: gold;
+}
+
+.rating ion-icon {
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.rating ion-icon:last-child {
+    margin-right: 0;
+}
+
+.rating .star {
+    font-size: 1.2em;
+    margin-right: 5px;
+    color: #999; /* Default star color */
+}
+
+.rating .star-filled {
+    color: gold; /* Filled star color */
+}
+
+.menu-items {
+    background: #292929; /* Darker menu items background color */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.menu-item {
+    background: #1c1c1c; /* Darker menu item background color */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* --------------------------------------------- */
+/* Lower part in flex */
+.comments {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30vh;
+}
+
+.comments .view-comments {
+    width: 50%;
+}
+
+.view-comments .vcomments-box {
+    position: relative;
+    font-size: small;
+    padding: 15px 0px 0px 10px;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10%;
+    background: #1c1c1c; /* Dark view comments background color */
+    color: white;
+}
+
+.comments .write-comments {
+    width: 50%;
+}
+
+.write-comments .comment-text {
+    position: relative;
+    top: 40px;
+    left: 30px;
+    font-size: smaller;
+    color: white; /* Comment text color */
+}
+
+.write-comments input[type="text"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 2%;
+    width: 95%;
+    padding: 15px 5px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #3a3a3a; /* Dark input background color */
+    color: white; /* Input text color */
+}
+
+.write-comments button {
+    padding: 8px 20px;
+    right: 100%;
+    background-color: #1c1c1c; /* Dark button background color */
+    content: center;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.write-comments .wcomments-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: small;
+    top: 50px;
+    width: 75%;
+    height: 40%;
+    border-radius: 15%;
+    background: #1c1c1c; /* Dark write comments background color */
+    color: white;
+}
+
+/* Neumorphic styles */
+
+body,
+.menu-items,
+.menu-item,
+.view-comments .vcomments-box,
+.write-comments .wcomments-box {
+    background: #1c1c1c; /* Dark body background color */
+}
+
+.menu-items,
+.menu-item,
+.view-comments .vcomments-box,
+.write-comments .wcomments-box {
+    border-radius: 10px;
+}
+
+.menu-items {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item,
+.view-comments .vcomments-box,
+.write-comments .wcomments-box {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(0, 0, 0, 0.5);
+}
