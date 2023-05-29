@@ -1,0 +1,53 @@
+/* Dark Theme */
+
+body {
+    background: #1e2124;
+    color: #fff;
+}
+
+header {
+    background: #0c1117;
+}
+
+.logo {
+    color: #fff;
+}
+
+.navigation a {
+    color: #fff;
+}
+
+.navigation a::after {
+    background: #fff;
+}
+
+.navigation .btnlogin-popup {
+    border-color: #0c1117;
+    color: #fff;
+}
+
+.navigation .btnlogin-popup:hover {
+    background-color: #0c1117;
+    color: #fff;
+}
+
+.settings,
+.mode {
+    color: #fff;
+}
+
+.card,
+.card:nth-child(odd),
+.card:nth-child(even) {
+    background: #282c31;
+}
+
+.card .content-card {
+    background: #282c31;
+}
+
+.stall,
+.stall button {
+    background-color: #282c31;
+    color: #fff;
+}

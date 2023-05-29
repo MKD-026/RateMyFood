@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url('background.jpg') repeat; */
+    background: #eff0f4;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+
+}
+
+/* --------------------------------------------- */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+	background: #162938;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    font-size: 2em;
+    margin-left: -70px;
+    color: crimson;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid  #162938;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    content: center;
+}
+
+.navigation .btnlogin-popup:hover {
+    background-color: white;
+    color: #162938;
+    border-radius: 50%;
+}
+
+.settings {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.mode {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+
+
+
+/* --------------------------------------------- */
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.carrousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: auto;
+    scroll-snap-type: x;
+    scrollbar-width: none;
+}
+
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    min-height: 675px;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border-radius: 25%;
+    background: whitesmoke;
+}
+
+.card .content-card {
+    position: relative;
+	background: whitesmoke;
+	min-height: 450px;
+    min-width: 300px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.card .image img {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -135%);
+    width: 330px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.card .meal-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    padding: 80px 30px 60px; /* Adjusted value */
+    text-align: center;
+}
+.card .meal-name .food {
+    padding: 45px;
+    font-size: 1.em;
+}
+
+.card .meal-name button {
+    width: 150px;
+    height: 50px;
+    margin-bottom: -480px; /* Adjusted value */
+    background-color: #162938;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.card:nth-child(odd) {
+    background: #eff0f4;
+}
+
+.card:nth-child(even) {
+    background: #eff0f4;
+}
+
+
+/* --------------------------------------------- */
+
+.stall {
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    width: 80%;
+    height: 10%;
+    padding: 20px 100px;
+    background-color: white;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    align-items: center;
+
+}
+
+.stall button {
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: white;
+    /* Change border */
+    border: none; 
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.pop-box {
+    text-align: center;
+    font-size: 1.9em;
+    color: black;
+}

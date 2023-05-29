@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing main page</title>
+    <link rel="stylesheet" href="main-page.css">
+    <link rel="stylesheet" href="dark-theme-main-page.css" id="theme-style">
+</head>
+<body>
+
+    <header>
+        <ion-icon class="logo-icon" name="fast-food"></ion-icon>
+    
+        <h6 class="logo">Hello User!</h6>
+        <nav class="navigation">
+            <button class="btnlogin-popup" onclick="toggleTheme()">
+                <ion-icon class ="mode" name="contrast-outline"></ion-icon>
+            </button>
+            
+            <button class="btnlogin-popup">
+                <ion-icon class="settings" name="cog-outline"></ion-icon>
+            </button>
+            
+        </nav>
+    </header>
+
+
+    <div class="conteudo">
+        <div class="carrousel">
+            <article class = "card">
+                <div class="content-card">
+                    <div class="image">
+                       <img src="../Resources/breakfast.jpeg" alt="">
+                    </div>
+
+                    <div class="meal-name">
+                        <span class="food"><h3>Breakfast</h3></span>
+                        <button onclick="location.href='../menu-items/menu-items.html?meal=breakfast' ">View Menu</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class = "card">
+                <div class="content-card">
+                    <div class="image">
+                       <img src="../Resources/lunch.jpeg" alt="">
+                    </div>
+
+                    <div class="meal-name">
+                        <span class="food"><h3>Lunch</h3></span>
+                        <button onclick="location.href='../menu-items/menu-items.html?meal=lunch' ">View Menu</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class = "card">
+                <div class="content-card">
+                    <div class="image">
+                       <img src="../Resources/snacks.jpeg" alt="">
+                    </div>
+
+                    <div class="meal-name">
+                        <span class="food"><h3>Snacks</h3></span>
+                        <button onclick="location.href='../menu-items/menu-items.html?meal=snacks' ">View Menu</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class = "card">
+                <div class="content-card">
+                    <div class="image">
+                       <img src="../Resources/dinner.jpeg" alt="">
+                    </div>
+
+                    <div class="meal-name">
+                        <span class="food"><h3>Dinner</h3></span>
+                        <button onclick="location.href='../menu-items/menu-items.html?meal=dinner' ">View Menu</button>
+                    </div>
+                </div>
+            </article>
+            </article>
+        </div>
+
+        <div class="stall">
+            <button>
+                <div class="pop-box">
+                  <h3>Stalls</h3>
+            </button>
+            </div>
+        </div>
+    </div>
+            
+    <script>
+        function toggleTheme() {
+            const themeLink = document.getElementById("theme-style");
+            const currentTheme = themeLink.getAttribute("href");
+
+            // Check the current theme and toggle between light and dark themes
+            if (currentTheme === "main-page.css") {
+                themeLink.setAttribute("href", "dark-theme-main-page.css");
+            } else {
+                themeLink.setAttribute("href", "main-page.css");
+            }
+        }
+    </script>   
+    <script src="main-page.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
