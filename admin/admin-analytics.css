@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eff0f4;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+/* --------------------------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+	background: #162938;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    font-size: 2em;
+    margin-left: -70px;
+    color: crimson;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnlogin-popup {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid  #162938;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    content: center;
+}
+
+.navigation .btnlogin-popup:hover {
+    background-color: white;
+    color: #162938;
+    border-radius: 50%;
+}
+
+.settings {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+
+.mode {
+    font-size: 2em;
+    margin-left: center;
+    color: white;
+    border-radius: 50%;
+}
+/* --------------------------------------------- */
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* --------------------------------------------- */
+/* Upper part in flex */
+.info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+    background: #eff0f4;
+}
+
+.info .food-pic {
+    width: 50%;
+}
+
+.image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-140%, -65%);
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid #fff;
+}
+
+.info .menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+    width: 40%;
+
+    padding: 50px;
+    margin-top: 150px;
+    margin-right: 70px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background: #e0e5ec;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+/* --------------------------------------------- */
+/* Lower part in flex */
+.comments {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30vh;
+}
+
+.comments .view-comments {
+    width: 50%;
+}
+
+.view-comments .vcomments-box {
+    position: relative;
+    font-size: small;
+    padding: 15px 0px 0px 10px;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10%;
+    background: white;
+}
+
+/* Neumorphic styles */
+
+body,
+.menu-items,
+.menu-item,
+.view-comments .vcomments-box {
+    background: #eff0f4;
+}
+
+.menu-items,
+.menu-item,
+.view-comments .vcomments-box {
+    border-radius: 10px;
+}
+
+.menu-items {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.menu-item,
+.view-comments .vcomments-box {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing main page</title>
+    <link rel="stylesheet" href="admin-analytics.css">
+    <!-- <link rel="stylesheet" href="dark-theme-menu-items.css" id="theme-style"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <ion-icon class="logo-icon" name="fast-food"></ion-icon>
+    
+        <h6 class="logo">Hello Admin!</h6>
+        <nav class="navigation">
+            <button class="btnlogin-popup" onclick="toggleTheme()">
+                <div class="mode">
+                    <ion-icon name="contrast-outline"></ion-icon>
+                </div>
+            </button>
+            
+            <button class="btnlogin-popup">
+                <ion-icon class="settings" name="cog-outline"></ion-icon>
+            </button>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- This div class contains information about the food menu -->
+        <div class="info">
+            <div class="food-pic">
+                <!-- This is the image of the meal or left side -->
+                <div class="image">
+                    <img id="meal-image" src="" alt="">
+                </div>
+                
+            </div>
+
+
+            <!-- This is the right side  -->
+            <div class="menu-items">
+                <canvas id="myChart" , height="100" ,width="50" ,display></canvas>
+            </div>
+        </div>
+
+
+
+
+        <!-- This div class is for commenting on the food and viewning the comments -->
+        <div class="comments">
+            <div class="view-comments">
+                <div class="vcomments-box">
+                    <h1> Comments: </h1>
+                    <h3>The food was delicious... </h3>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        const ctx = document.getElementById("myChart");
+        let data_val = [1, 2, 3, 4, 5, 6, 7]; //insert the data array here
+        new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            datasets: [
+              {
+                label: "# of Votes",
+                data: data_val,
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              x: {
+                grid: {
+                  display: false,
+                },
+              },
+              y: {
+                grid: {
+                  display: false,
+                },
+              },
+            },
+          },
+        });
+      </script> 
+      
+    <script src="menu-items.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
